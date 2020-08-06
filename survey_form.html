@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <section id="left-side">
+        <h1 id="title">Lexington's Survey Form</h1>
+        <p id="description">How good has this global situation been for you?</p>
+      </section>
+
+      <section id="right-side">
+        <form action="#" id="survey-form" method="get">
+          <fieldset class="chart left">
+            <legend>User information</legend>
+            <div class="group">
+              <label for="name" id="name-label">Insert your name: </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="First name"
+                required
+              />
+              <label for="email" id="email-label">Insert your E-mail: </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@direction.com"
+                required
+              />
+              <label for="age" id="number-label">Insert your Age: </label>
+              <input
+                type="number"
+                name="age"
+                id="number"
+                placeholder=" 12-70"
+                min="12"
+                max="70"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="left chart">
+            <legend>What do you think?</legend>
+            <div class="group">
+              <select name="Your option" id="dropdown">
+                <option value="">Everything is a lie</option>
+                <option value="">It's not that bad</option>
+                <option value="">I'm scared</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div class="two-side">
+            <fieldset class="one chart">
+              <legend>How do you feel?</legend>
+
+              <label for="level-1" class="label">Bad</label>
+              <input
+                type="radio"
+                value="bad"
+                name="option-level"
+                id="level-1"
+                class="input"
+              />
+              <label for="level-2" class="label">Regular</label>
+              <input
+                type="radio"
+                value="regular"
+                name="option-level"
+                id="level-2"
+                class="input"
+              />
+              <label for="level-3" class="label">Good</label>
+              <input
+                type="radio"
+                value="good"
+                name="option-level"
+                id="level-3"
+                checked
+                class="input"
+              />
+              <label for="level-4" class="label">Excelent</label>
+              <input
+                type="radio"
+                value="excelent"
+                name="option-level"
+                id="level-4"
+                class="input"
+              />
+            </fieldset>
+
+            <fieldset class="two chart">
+              <legend>What have you done?</legend>
+
+              <label for="exercise" class="label">Exercise</label>
+              <input
+                type="checkbox"
+                id="exercise"
+                name="sport"
+                value="exercise"
+                class="input"
+              />
+              <label for="language" class="label">Study a language</label>
+              <input
+                type="checkbox"
+                id="language"
+                name="study"
+                value="language"
+                class="input"
+              />
+              <label for="swimming" class="label">Swimming</label>
+              <input
+                type="checkbox"
+                id="swnimming"
+                value="swimming"
+                name="sport"
+                class="input"
+              />
+              <label for="code" class="label">Study coding</label>
+              <input
+                type="checkbox"
+                id="code"
+                name="study"
+                value="code"
+                class="input"
+              />
+            </fieldset>
+          </div>
+
+          <fieldset class="under chart">
+            <legend>Give us your personal opinion</legend>
+            <textarea name="" id="" cols="" rows=""></textarea>
+          </fieldset>
+          <input type="submit" id="submit" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  background-color: rgb(29, 85, 163);
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Merriweather", serif;
+  background-color: rgb(255, 255, 255);
+  margin: 20% 5% 10%;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+#left-side {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+#title {
+  font-size: 2.5em;
+  color: #0d60d4;
+}
+
+#right-side {
+  width: 100%;
+}
+
+.chart {
+  padding-bottom: 5%;
+}
+
+.group {
+  display: flex;
+  flex-flow: column;
+}
+
+.label {
+  float: left;
+  clear: left;
+}
+
+.input {
+  float: left;
+  clear: right;
+}
+
+legend {
+  color: #0d60d4;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border: 3px solid rgba(13, 96, 212, 0.5);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 760px) {
+  #main-container {
+    margin: 20% 10% 10%;
+  }
+
+  .chart {
+    padding-bottom: 3%;
+  }
+  .one {
+    width: 45%;
+  }
+  .two {
+    width: 45%;
+  }
+  .two-side {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #main-container {
+    margin: 20% 20% 10%;
+  }
+}
