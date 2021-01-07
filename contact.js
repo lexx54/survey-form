@@ -12,12 +12,12 @@ function contactMaker(){
     $para=d.createElement('p'),
     $paraLink=d.createElement('a'),
     $divSocial=d.createElement('div'),
-    $twitterIc=d.createElement("a"),
-    $twitterLink=d.createElement('i');
-    $githubIc=d.createElement("a"),
-    $linkedinIc=d.createElement("a"),
     $head=d.getElementsByTagName("head")[0],
     $linkFont=d.createElement('link');
+
+    const links=['https://twitter.com/code_lexx',"https://github.com/lexx54","https://www.linkedin.com/in/lexx-chape-01b521193/"],
+    classes=[['fab','fa-twitter-square'],['fab','fa-github-square'],['fab','fa-linkedin']];
+    
 
     console.log($head)
     //first create the FontAwesome's link
@@ -38,17 +38,22 @@ function contactMaker(){
   $divLine.style.backgroundColor="black";
   $divLine.style.height="2px";
 
-  $twitterIc.href="https://twitter.com/code_lexx";
-  $twitterLink.classList.add("fab","fa-twitter-square")
-  $twitterIc.appendChild($twitterLink);
+  //create the link and icons for the social contacts
+  for (let i=0;i<3;i++){
+    const $icon=d.createElement("i"),
+      $link=d.createElement("a");
 
-  if(!$main){
-    console.log("exist")
-  } else{
-    $footer.appendChild($divLine);
-    $footer.appendChild($twitterIc);
+      $link.href=links[i]; //set the url
+      $icon.classList.add(classes[i][0],classes[i][1]); //set the font awesome classes
 
-    $main.appendChild($footer);
+      $link.appendChild($icon); //add the icon inside the anchor tag
+
+      $divSocial.appendChild($link); //append the each a tag to the social div once at a time
   }
+  // $twitterIc.href="https://twitter.com/code_lexx";
+  // $twitterLink.classList.add("fab","fa-twitter-square")
+  // $twitterIc.appendChild($twitterLink);
+
+
 
 }
