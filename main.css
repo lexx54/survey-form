@@ -80,6 +80,6 @@ input[type="number"]:focus {
 
 @media screen and (min-width: 1080px) {
   #main-container {
-    margin: 20% 20% 10%;
+    margin: 5em 25% 10%;
   }
 }
